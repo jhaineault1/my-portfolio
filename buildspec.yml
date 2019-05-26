@@ -1,6 +1,10 @@
 version: 0.2
 
 phases:
+  build:
+    commands:
+      - npm install
+      - npm run webpack
   install:
     runtime-versions:
       nodejs: 10
@@ -11,3 +15,4 @@ artifacts:
     - Jeff_Haineault_Resume.pdf
     - styles/main.css
     - images/*
+    - dist/bundle.js
