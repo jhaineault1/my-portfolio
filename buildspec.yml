@@ -5,9 +5,6 @@ phases:
     commands:
       - npm install
       - npm run webpack
-  install:
-    runtime-versions:
-      nodejs: 10
 artifacts:
   files:
     - index.html
