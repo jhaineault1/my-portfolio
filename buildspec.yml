@@ -2,13 +2,13 @@ version: 0.2
 
 phases:
   install:
+    commands:
+      - npm install
     runtime-versions:
       nodejs: 10
   build:
     commands:
-      - npm install
-      - sudo npm run webpack
-
+      - npm run webpack
 artifacts:
   files:
     - index.html
