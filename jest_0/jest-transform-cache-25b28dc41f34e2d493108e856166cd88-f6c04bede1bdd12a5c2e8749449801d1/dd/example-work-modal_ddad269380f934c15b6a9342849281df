@@ -1,0 +1,78 @@
+30470b016c8328cd02e95f87c277203f
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ExampleWorkModal = function (_React$Component) {
+  _inherits(ExampleWorkModal, _React$Component);
+
+  function ExampleWorkModal() {
+    _classCallCheck(this, ExampleWorkModal);
+
+    return _possibleConstructorReturn(this, (ExampleWorkModal.__proto__ || Object.getPrototypeOf(ExampleWorkModal)).apply(this, arguments));
+  }
+
+  _createClass(ExampleWorkModal, [{
+    key: 'render',
+    value: function render() {
+      var example = this.props.example;
+      var modalClass = this.props.open ? 'modal--open' : 'modal--closed';
+      return _react2.default.createElement(
+        'div',
+        { className: "background--skyBlue " + modalClass },
+        _react2.default.createElement(
+          'span',
+          { className: 'color--cloud modal__closeButton',
+            onClick: this.props.closeModal },
+          _react2.default.createElement('i', { className: 'fa fa-window-close-o' })
+        ),
+        _react2.default.createElement('img', { alt: example.image.desc,
+          className: 'modal__image',
+          src: example.image.src }),
+        _react2.default.createElement(
+          'div',
+          { className: 'color--cloud modal__text' },
+          _react2.default.createElement(
+            'h2',
+            { className: 'modal__title' },
+            example.title
+          ),
+          _react2.default.createElement(
+            'a',
+            { className: 'color--skyBlue modal__link',
+              href: example.href },
+            'Check it out'
+          ),
+          _react2.default.createElement(
+            'p',
+            { className: 'modal__description' },
+            example.desc
+          )
+        )
+      );
+    }
+  }]);
+
+  return ExampleWorkModal;
+}(_react2.default.Component);
+
+;
+
+exports.default = ExampleWorkModal;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImV4YW1wbGUtd29yay1tb2RhbC5qcyJdLCJuYW1lcyI6WyJFeGFtcGxlV29ya01vZGFsIiwiZXhhbXBsZSIsInByb3BzIiwibW9kYWxDbGFzcyIsIm9wZW4iLCJjbG9zZU1vZGFsIiwiaW1hZ2UiLCJkZXNjIiwic3JjIiwidGl0bGUiLCJocmVmIiwiUmVhY3QiLCJDb21wb25lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7O0FBQUE7Ozs7Ozs7Ozs7OztJQUVNQSxnQjs7Ozs7Ozs7Ozs7NkJBRUs7QUFDUCxVQUFJQyxVQUFVLEtBQUtDLEtBQUwsQ0FBV0QsT0FBekI7QUFDQSxVQUFJRSxhQUFhLEtBQUtELEtBQUwsQ0FBV0UsSUFBWCxHQUFrQixhQUFsQixHQUFrQyxlQUFuRDtBQUNBLGFBQ0U7QUFBQTtBQUFBLFVBQUssV0FBVyx5QkFBeUJELFVBQXpDO0FBQ0U7QUFBQTtBQUFBLFlBQU0sV0FBVSxpQ0FBaEI7QUFDRSxxQkFBUyxLQUFLRCxLQUFMLENBQVdHLFVBRHRCO0FBRUUsK0NBQUcsV0FBVSxzQkFBYjtBQUZGLFNBREY7QUFLRSwrQ0FBSyxLQUFNSixRQUFRSyxLQUFSLENBQWNDLElBQXpCO0FBQ0sscUJBQVUsY0FEZjtBQUVLLGVBQU1OLFFBQVFLLEtBQVIsQ0FBY0UsR0FGekIsR0FMRjtBQVFFO0FBQUE7QUFBQSxZQUFLLFdBQVUsMEJBQWY7QUFDRTtBQUFBO0FBQUEsY0FBSSxXQUFVLGNBQWQ7QUFDSVAsb0JBQVFRO0FBRFosV0FERjtBQUlFO0FBQUE7QUFBQSxjQUFHLFdBQVUsNEJBQWI7QUFDRyxvQkFBTVIsUUFBUVMsSUFEakI7QUFBQTtBQUFBLFdBSkY7QUFRRTtBQUFBO0FBQUEsY0FBRyxXQUFVLG9CQUFiO0FBQ0lULG9CQUFRTTtBQURaO0FBUkY7QUFSRixPQURGO0FBdUJEOzs7O0VBNUI0QkksZ0JBQU1DLFM7O0FBNkJwQzs7a0JBRWNaLGdCIiwiZmlsZSI6ImV4YW1wbGUtd29yay1tb2RhbC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5cbmNsYXNzIEV4YW1wbGVXb3JrTW9kYWwgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xuXG4gIHJlbmRlcigpIHtcbiAgICBsZXQgZXhhbXBsZSA9IHRoaXMucHJvcHMuZXhhbXBsZTtcbiAgICBsZXQgbW9kYWxDbGFzcyA9IHRoaXMucHJvcHMub3BlbiA/ICdtb2RhbC0tb3BlbicgOiAnbW9kYWwtLWNsb3NlZCc7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXYgY2xhc3NOYW1lPXtcImJhY2tncm91bmQtLXNreUJsdWUgXCIgKyBtb2RhbENsYXNzfT5cbiAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiY29sb3ItLWNsb3VkIG1vZGFsX19jbG9zZUJ1dHRvblwiXG4gICAgICAgICAgb25DbGljaz17dGhpcy5wcm9wcy5jbG9zZU1vZGFsfT5cbiAgICAgICAgICA8aSBjbGFzc05hbWU9XCJmYSBmYS13aW5kb3ctY2xvc2Utb1wiPjwvaT5cbiAgICAgICAgPC9zcGFuPlxuICAgICAgICA8aW1nIGFsdD17IGV4YW1wbGUuaW1hZ2UuZGVzYyB9XG4gICAgICAgICAgICAgY2xhc3NOYW1lPVwibW9kYWxfX2ltYWdlXCJcbiAgICAgICAgICAgICBzcmM9eyBleGFtcGxlLmltYWdlLnNyYyB9Lz5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb2xvci0tY2xvdWQgbW9kYWxfX3RleHRcIj5cbiAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwibW9kYWxfX3RpdGxlXCI+XG4gICAgICAgICAgICB7IGV4YW1wbGUudGl0bGUgfVxuICAgICAgICAgIDwvaDI+XG4gICAgICAgICAgPGEgY2xhc3NOYW1lPVwiY29sb3ItLXNreUJsdWUgbW9kYWxfX2xpbmtcIlxuICAgICAgICAgICAgIGhyZWY9e2V4YW1wbGUuaHJlZiB9PlxuICAgICAgICAgICAgQ2hlY2sgaXQgb3V0XG4gICAgICAgICAgPC9hPlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cIm1vZGFsX19kZXNjcmlwdGlvblwiPlxuICAgICAgICAgICAgeyBleGFtcGxlLmRlc2N9XG4gICAgICAgICAgPC9wPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIClcbiAgfTtcbn07XG5cbmV4cG9ydCBkZWZhdWx0IEV4YW1wbGVXb3JrTW9kYWw7XG4iXX0=

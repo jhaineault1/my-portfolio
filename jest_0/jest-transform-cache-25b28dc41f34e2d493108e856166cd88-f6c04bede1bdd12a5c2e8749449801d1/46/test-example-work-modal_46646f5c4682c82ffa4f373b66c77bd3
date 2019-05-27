@@ -1,0 +1,55 @@
+8a9f8dcce761791f8dd52b2f7762b1ba
+'use strict';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _enzyme = require('enzyme');
+
+var _enzyme2 = _interopRequireDefault(_enzyme);
+
+var _exampleWorkModal = require('../js/example-work-modal');
+
+var _exampleWorkModal2 = _interopRequireDefault(_exampleWorkModal);
+
+var _enzymeAdapterReact = require('enzyme-adapter-react-16');
+
+var _enzymeAdapterReact2 = _interopRequireDefault(_enzymeAdapterReact);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_enzyme2.default.configure({ adapter: new _enzymeAdapterReact2.default() });
+
+var myExample = {
+  'title': "Python Projects",
+  'href': "https://example.com",
+  'desc': "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  'image': {
+    'desc': "example screenshot of a project involving code",
+    'src': "images/example1.png",
+    'comment': ""
+  }
+};
+
+describe("ExampleWorkModal component", function () {
+  var component = (0, _enzyme.shallow)(_react2.default.createElement(_exampleWorkModal2.default, { example: myExample,
+    open: false }));
+  var openComponent = (0, _enzyme.shallow)(_react2.default.createElement(_exampleWorkModal2.default, { example: myExample,
+    open: true }));
+  var anchors = component.find("a");
+
+  it("Should contain a single 'a' element", function () {
+    expect(anchors.length).toEqual(1);
+  });
+
+  it("Should link to our project", function () {
+    expect(anchors.prop('href')).toEqual(myExample.href);
+  });
+
+  it("Should have the modal class set correctly", function () {
+    expect(component.find(".background--skyBlue").hasClass("modal--closed")).toBe(true);
+    expect(openComponent.find(".background--skyBlue").hasClass("modal--open")).toBe(true);
+  });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInRlc3QtZXhhbXBsZS13b3JrLW1vZGFsLmpzIl0sIm5hbWVzIjpbIkVuenltZSIsImNvbmZpZ3VyZSIsImFkYXB0ZXIiLCJBZGFwdGVyIiwibXlFeGFtcGxlIiwiZGVzY3JpYmUiLCJjb21wb25lbnQiLCJvcGVuQ29tcG9uZW50IiwiYW5jaG9ycyIsImZpbmQiLCJpdCIsImV4cGVjdCIsImxlbmd0aCIsInRvRXF1YWwiLCJwcm9wIiwiaHJlZiIsImhhc0NsYXNzIiwidG9CZSJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFHQTs7Ozs7O0FBQ0FBLGlCQUFPQyxTQUFQLENBQWlCLEVBQUVDLFNBQVMsSUFBSUMsNEJBQUosRUFBWCxFQUFqQjs7QUFFQSxJQUFNQyxZQUFZO0FBQ2hCLFdBQVMsaUJBRE87QUFFaEIsVUFBUSxxQkFGUTtBQUdoQixVQUFRLGdjQUhRO0FBSWhCLFdBQVM7QUFDUCxZQUFRLGdEQUREO0FBRVAsV0FBTyxxQkFGQTtBQUdQLGVBQVc7QUFISjtBQUpPLENBQWxCOztBQVdBQyxTQUFTLDRCQUFULEVBQXVDLFlBQU07QUFDM0MsTUFBSUMsWUFBWSxxQkFBUSw4QkFBQywwQkFBRCxJQUFrQixTQUFTRixTQUEzQjtBQUN0QixVQUFNLEtBRGdCLEdBQVIsQ0FBaEI7QUFFQSxNQUFJRyxnQkFBZ0IscUJBQVEsOEJBQUMsMEJBQUQsSUFBa0IsU0FBU0gsU0FBM0I7QUFDMUIsVUFBTSxJQURvQixHQUFSLENBQXBCO0FBRUEsTUFBSUksVUFBVUYsVUFBVUcsSUFBVixDQUFlLEdBQWYsQ0FBZDs7QUFFQUMsS0FBRyxxQ0FBSCxFQUEwQyxZQUFNO0FBQzlDQyxXQUFPSCxRQUFRSSxNQUFmLEVBQXVCQyxPQUF2QixDQUErQixDQUEvQjtBQUNELEdBRkQ7O0FBSUFILEtBQUcsNEJBQUgsRUFBaUMsWUFBTTtBQUNyQ0MsV0FBT0gsUUFBUU0sSUFBUixDQUFhLE1BQWIsQ0FBUCxFQUE2QkQsT0FBN0IsQ0FBcUNULFVBQVVXLElBQS9DO0FBQ0QsR0FGRDs7QUFJQUwsS0FBRywyQ0FBSCxFQUFnRCxZQUFNO0FBQ3BEQyxXQUFPTCxVQUFVRyxJQUFWLENBQWUsc0JBQWYsRUFBdUNPLFFBQXZDLENBQWdELGVBQWhELENBQVAsRUFBeUVDLElBQXpFLENBQThFLElBQTlFO0FBQ0FOLFdBQU9KLGNBQWNFLElBQWQsQ0FBbUIsc0JBQW5CLEVBQTJDTyxRQUEzQyxDQUFvRCxhQUFwRCxDQUFQLEVBQTJFQyxJQUEzRSxDQUFnRixJQUFoRjtBQUVELEdBSkQ7QUFLRCxDQXBCRCIsImZpbGUiOiJ0ZXN0LWV4YW1wbGUtd29yay1tb2RhbC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgeyBzaGFsbG93IH0gZnJvbSAnZW56eW1lJztcbmltcG9ydCBFeGFtcGxlV29ya01vZGFsIGZyb20gJy4uL2pzL2V4YW1wbGUtd29yay1tb2RhbCc7XG5cbmltcG9ydCBFbnp5bWUgZnJvbSAnZW56eW1lJztcbmltcG9ydCBBZGFwdGVyIGZyb20gJ2VuenltZS1hZGFwdGVyLXJlYWN0LTE2JztcbkVuenltZS5jb25maWd1cmUoeyBhZGFwdGVyOiBuZXcgQWRhcHRlcigpIH0pO1xuXG5jb25zdCBteUV4YW1wbGUgPSB7XG4gICd0aXRsZSc6IFwiUHl0aG9uIFByb2plY3RzXCIsXG4gICdocmVmJzogXCJodHRwczovL2V4YW1wbGUuY29tXCIsXG4gICdkZXNjJzogXCJMb3JlbSBpcHN1bSBkb2xvciBzaXQgYW1ldCwgY29uc2VjdGV0dXIgYWRpcGlzaWNpbmcgZWxpdCwgc2VkIGRvIGVpdXNtb2QgdGVtcG9yIGluY2lkaWR1bnQgdXQgbGFib3JlIGV0IGRvbG9yZSBtYWduYSBhbGlxdWEuIFV0IGVuaW0gYWQgbWluaW0gdmVuaWFtLCBxdWlzIG5vc3RydWQgZXhlcmNpdGF0aW9uIHVsbGFtY28gbGFib3JpcyBuaXNpIHV0IGFsaXF1aXAgZXggZWEgY29tbW9kbyBjb25zZXF1YXQuIER1aXMgYXV0ZSBpcnVyZSBkb2xvciBpbiByZXByZWhlbmRlcml0IGluIHZvbHVwdGF0ZSB2ZWxpdCBlc3NlIGNpbGx1bSBkb2xvcmUgZXUgZnVnaWF0IG51bGxhIHBhcmlhdHVyLiBFeGNlcHRldXIgc2ludCBvY2NhZWNhdCBjdXBpZGF0YXQgbm9uIHByb2lkZW50LCBzdW50IGluIGN1bHBhIHF1aSBvZmZpY2lhIGRlc2VydW50IG1vbGxpdCBhbmltIGlkIGVzdCBsYWJvcnVtLlwiLFxuICAnaW1hZ2UnOiB7XG4gICAgJ2Rlc2MnOiBcImV4YW1wbGUgc2NyZWVuc2hvdCBvZiBhIHByb2plY3QgaW52b2x2aW5nIGNvZGVcIixcbiAgICAnc3JjJzogXCJpbWFnZXMvZXhhbXBsZTEucG5nXCIsXG4gICAgJ2NvbW1lbnQnOiBcIlwiXG4gIH1cbn07XG5cbmRlc2NyaWJlKFwiRXhhbXBsZVdvcmtNb2RhbCBjb21wb25lbnRcIiwgKCkgPT4ge1xuICBsZXQgY29tcG9uZW50ID0gc2hhbGxvdyg8RXhhbXBsZVdvcmtNb2RhbCBleGFtcGxlPXtteUV4YW1wbGV9XG4gICAgb3Blbj17ZmFsc2V9Lz4pO1xuICBsZXQgb3BlbkNvbXBvbmVudCA9IHNoYWxsb3coPEV4YW1wbGVXb3JrTW9kYWwgZXhhbXBsZT17bXlFeGFtcGxlfVxuICAgIG9wZW49e3RydWV9Lz4pO1xuICBsZXQgYW5jaG9ycyA9IGNvbXBvbmVudC5maW5kKFwiYVwiKTtcblxuICBpdChcIlNob3VsZCBjb250YWluIGEgc2luZ2xlICdhJyBlbGVtZW50XCIsICgpID0+IHtcbiAgICBleHBlY3QoYW5jaG9ycy5sZW5ndGgpLnRvRXF1YWwoMSk7XG4gIH0pO1xuXG4gIGl0KFwiU2hvdWxkIGxpbmsgdG8gb3VyIHByb2plY3RcIiwgKCkgPT4ge1xuICAgIGV4cGVjdChhbmNob3JzLnByb3AoJ2hyZWYnKSkudG9FcXVhbChteUV4YW1wbGUuaHJlZik7XG4gIH0pO1xuXG4gIGl0KFwiU2hvdWxkIGhhdmUgdGhlIG1vZGFsIGNsYXNzIHNldCBjb3JyZWN0bHlcIiwgKCkgPT4ge1xuICAgIGV4cGVjdChjb21wb25lbnQuZmluZChcIi5iYWNrZ3JvdW5kLS1za3lCbHVlXCIpLmhhc0NsYXNzKFwibW9kYWwtLWNsb3NlZFwiKSkudG9CZSh0cnVlKTtcbiAgICBleHBlY3Qob3BlbkNvbXBvbmVudC5maW5kKFwiLmJhY2tncm91bmQtLXNreUJsdWVcIikuaGFzQ2xhc3MoXCJtb2RhbC0tb3BlblwiKSkudG9CZSh0cnVlKTtcblxuICB9KVxufSk7XG4iXX0=
