@@ -29,7 +29,7 @@ class ExampleWork extends React.Component {
   render() {
     return (
       <span>
-        <section className="section section--alignCentered section--description">
+        <section className="section section--alignCentered section__text--centered">
           {this.props.work.map( (example, idx) => {
             return (
               <ExampleWorkBubble example={example} key={idx}
