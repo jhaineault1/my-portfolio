@@ -53,22 +53,11 @@
         </li>
       </ul>
     </main>
+
     <section class="background--skyBlue section">
-      <h2 class="color--cloud margin--none section__text--topcentered">
+      <h2 class="color--cloud margin--none section__text--centered">
         Portfolio
       </h2>
-
-      <p class="color--cloud margin--none section__text--centered">
-        I built this site using a "Serverless" CI/CD pipeline in AWS.
-        The domain is managed by AWS's Route 53 while CloudFront hosts the site across the world.
-        The portfolio files are stored in a S3 bucket which were mainly written in ReactJS and BABEL.
-
-        AWS's CodeBuild grabs the code from my GitHub and automatically pushes it into production using
-        AWS's CodePipeline combined with a Lambda function.
-
-        Once the code reaches the S3 bucket a SNS(Simple Notification Service) sends an email
-        stating whether the code was deployed successfully or not.
-      </p>
     </section>
 
     <div id="example-work"></div>
@@ -82,8 +71,15 @@
 
     <section class="section section--alignCentered section--description">
       <p class="color--darkgrey section__description">
-        I am learning to code in the cloud! I like to work hard and learn new things.
-        I want to work for a company that will pay me to code in the cloud!
+        I built this site using a "Serverless" CI/CD pipeline in AWS.
+        The domain is managed by AWS's Route 53 while CloudFront hosts the site across the world.
+        The portfolio files are stored in a S3 bucket which were mainly written in ReactJS and BABEL.
+
+        AWS's CodeBuild grabs the code from my GitHub and automatically pushes it into production using
+        AWS's CodePipeline combined with a Lambda function.
+
+        Once the code reaches the S3 bucket a SNS(Simple Notification Service) sends an email
+        stating whether the code was deployed successfully or not.
       </p>
 
 
