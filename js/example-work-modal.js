@@ -30,5 +30,4 @@ class ExampleWorkModal extends React.Component {
     )
   };
 };
-
 export default ExampleWorkModal;
