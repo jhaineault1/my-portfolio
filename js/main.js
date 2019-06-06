@@ -5,41 +5,41 @@ import ExampleWork from './example-work';
 const myWork = [
   {
     'title': "Python Projects",
-    'href': "https://example.com",
+    'href': "http://python-automation.jeffhaineault.info/",
     'desc': "",
     'image': {
       'desc': "example screenshot of a project involving code",
-      'src': "images/example1.png",
+      'src': "images/example7.png",
       'comment': ""
     }
   },
   {
     'title': "Kubernetes Projects",
-    'href': "https://example.com",
-    'desc': "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    'href': "images/giphy.gif",
+    'desc': "",
     'image': {
       'desc': "Serverless Portfolio",
-      'src': "images/example2.png",
-      'comment': ""
-    }
-  },
-  {
-    'title': "Kubernetes Projects",
-    'href': "https://example.com",
-    'desc': "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    'image': {
-      'desc': "Serverless Portfolio",
-      'src': "images/example2.png",
+      'src': "images/example6.png",
       'comment': ""
     }
   },
   {
     'title': "Hobbies",
+    'href': "https://www.reddit.com/r/fightporn/comments/bwf1yz/things_escalate_quickly_when_a_guy_gets_his_bike/?utm_source=share&utm_medium=web2x",
+    'desc': "",
+    'image': {
+      'desc': "Serverless Portfolio",
+      'src': "images/example5.jpg",
+      'comment': ""
+    }
+  },
+  {
+    'title': "About Me",
     'href': "https://example.com",
-    'desc': "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    'desc': "",
     'image': {
       'desc': "example screenshot",
-      'src': "images/example3.png",
+      'src': "images/example4.jpg",
       'comment': ""
     }
   }
