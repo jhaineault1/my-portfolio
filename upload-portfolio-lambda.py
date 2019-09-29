@@ -5,6 +5,7 @@ import StringIO
 import zipfile
 import mimetypes
 
+#Pushes portfolio to AWS
 def lambda_handler(event, context):
     sns = boto3.resource('sns')
     topic = sns.Topic('arn:aws:sns:us-east-1:685599794876:deployPortfolioTopic')
