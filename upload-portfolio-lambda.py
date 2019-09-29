@@ -5,8 +5,6 @@ import StringIO
 import zipfile
 import mimetypes
 
-#Automatically uploads to aws
-
 def lambda_handler(event, context):
     sns = boto3.resource('sns')
     topic = sns.Topic('arn:aws:sns:us-east-1:685599794876:deployPortfolioTopic')
@@ -42,7 +40,7 @@ def lambda_handler(event, context):
         print "Job Done!"
         topic.publish(Subject="Portfolio Deployed", Message="Portfolio deployed successfully!")
         if job:
-            codepipeline = boto3.client('codepipeline')
+            codepipeline = boto3.client('CodePipeline')
             codepipeline.put_job_success_result(jobId=job["id"])
 
     except:
